@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: stream-kafka
+  cloud:
+    stream:
+      bindings:
+        greetings-in:
+          content-type: application/json
+          destination: greetings
+        greetings-out:
+          content-type: application/json
+          destination: greetings
+      kafka:
+        binder:
+          brokers: localhost:9092
